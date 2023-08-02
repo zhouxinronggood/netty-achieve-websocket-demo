@@ -1,0 +1,22 @@
+{
+  "name": "spring-boot-websocket-demo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve",
+    "serve:fix": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "serve:fix:mac": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
+    "build:preview": "vue-cli-service build --no-module --mode preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "element-ui": "^2.15.13"
+  }
+}

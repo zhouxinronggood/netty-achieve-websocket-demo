@@ -1,0 +1,36 @@
+08:55:08.064 [main] INFO  c.e.s.SpringbootWebsocketDemoApplication - [logStartupProfileInfo,641] - The following profiles are active: dev
+08:55:09.182 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-8088"]
+08:55:09.183 [main] INFO  o.a.c.c.StandardService - [log,173] - Starting service [Tomcat]
+08:55:09.183 [main] INFO  o.a.c.c.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.56]
+08:55:09.282 [main] INFO  o.a.c.c.C.[.[.[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+08:55:09.755 [main] INFO  c.a.n.client.naming - [call,65] - initializer namespace from System Property :null
+08:55:09.756 [main] INFO  c.a.n.client.naming - [call,74] - initializer namespace from System Environment :null
+08:55:09.756 [main] INFO  c.a.n.client.naming - [call,84] - initializer namespace from System Property :null
+08:55:09.929 [main] INFO  c.e.s.c.DruidConfig - [dataSource,83] - database's url is jdbc:mysql://139.196.221.175:3306/netty_websocket?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&useSSL=true&tinyInt1isBit=false&useSSL=false
+08:55:20.708 [main] INFO  c.a.d.p.DruidDataSource - [init,990] - {dataSource-1} inited
+08:55:20.708 [main] INFO  c.e.s.c.DruidConfig - [dataSource,111] - <----------- The dataSource initialization is complete ---------->
+08:55:21.302 [main] INFO  c.a.n.client.naming - [processServiceJson,232] - new ips(1) service: DEFAULT_GROUP@@springboot.websocket.demo@@DEFAULT -> [{"instanceId":"10.31.88.155#8088#DEFAULT#DEFAULT_GROUP@@springboot.websocket.demo","ip":"10.31.88.155","port":8088,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@springboot.websocket.demo","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+08:55:21.311 [main] INFO  c.a.n.client.naming - [processServiceJson,271] - current ips:(1) service: DEFAULT_GROUP@@springboot.websocket.demo@@DEFAULT -> [{"instanceId":"10.31.88.155#8088#DEFAULT#DEFAULT_GROUP@@springboot.websocket.demo","ip":"10.31.88.155","port":8088,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@springboot.websocket.demo","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+08:55:21.314 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-8088"]
+08:55:21.319 [main] INFO  c.a.n.client.naming - [shutdown,147] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+08:55:21.319 [main] INFO  c.a.n.client.naming - [shutdown,149] - com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+08:55:21.320 [main] INFO  c.a.n.client.naming - [shutdown,413] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+08:55:21.787 [com.alibaba.nacos.naming.push.receiver] INFO  c.a.n.client.naming - [run,97] - received push data: {"type":"dom","data":"{\"name\":\"DEFAULT_GROUP@@springboot.websocket.demo\",\"clusters\":\"DEFAULT\",\"cacheMillis\":10000,\"hosts\":[{\"instanceId\":\"10.31.88.155#8088#DEFAULT#DEFAULT_GROUP@@springboot.websocket.demo\",\"ip\":\"10.31.88.155\",\"port\":8088,\"weight\":1.0,\"healthy\":true,\"enabled\":true,\"ephemeral\":true,\"clusterName\":\"DEFAULT\",\"serviceName\":\"DEFAULT_GROUP@@springboot.websocket.demo\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"instanceHeartBeatInterval\":5000,\"instanceHeartBeatTimeOut\":15000,\"ipDeleteTimeout\":30000}],\"lastRefTime\":1690937721784,\"checksum\":\"\",\"allIPs\":false,\"reachProtectionThreshold\":false,\"valid\":true}","lastRefTime":189487296227802} from /127.0.0.1
+08:55:22.318 [main] INFO  c.a.n.client.naming - [shutdown,132] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+08:55:25.328 [main] INFO  c.a.n.client.naming - [shutdown,136] - com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+08:55:25.328 [main] INFO  c.a.n.client.naming - [shutdown,132] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+08:55:25.328 [main] INFO  c.a.n.client.naming - [shutdown,134] - com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+08:55:25.329 [main] INFO  c.a.n.client.naming - [shutdown,418] - com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+08:55:25.329 [main] INFO  c.a.n.client.naming - [shutdown,719] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+08:55:25.330 [main] INFO  c.a.n.c.i.CredentialWatcher - [stop,105] - [null] CredentialWatcher is stopped
+08:55:25.330 [main] INFO  c.a.n.c.i.CredentialService - [free,98] - [null] CredentialService is freed
+08:55:25.330 [main] INFO  c.a.n.client.naming - [shutdown,723] - com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+08:55:25.331 [main] INFO  c.a.n.client.naming - [call,65] - initializer namespace from System Property :null
+08:55:25.331 [main] INFO  c.a.n.client.naming - [call,74] - initializer namespace from System Environment :null
+08:55:25.331 [main] INFO  c.a.n.client.naming - [call,84] - initializer namespace from System Property :null
+08:55:25.335 [main] INFO  c.a.d.p.DruidDataSource - [close,2043] - {dataSource-1} closing ...
+08:55:25.341 [main] INFO  c.a.d.p.DruidDataSource - [close,2116] - {dataSource-1} closed
+08:55:25.342 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Pausing ProtocolHandler ["http-nio-8088"]
+08:55:25.342 [main] INFO  o.a.c.c.StandardService - [log,173] - Stopping service [Tomcat]
+08:55:25.347 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Stopping ProtocolHandler ["http-nio-8088"]
+08:55:25.347 [main] INFO  o.a.c.h.Http11NioProtocol - [log,173] - Destroying ProtocolHandler ["http-nio-8088"]

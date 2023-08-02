@@ -1,0 +1,72 @@
+server:
+  port: @module.project.port@
+
+spring:
+  profiles:
+    active: @profile.active@
+  application:
+    name: springboot.websocket.demo
+  main:
+    allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
+  datasource:
+    druid:
+      url: @jdbc.url@?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&useSSL=true&tinyInt1isBit=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: @jdbc.username@
+      password: @jdbc.password@
+      initial-size: 10
+      max-active: 50
+      min-idle: 10
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      validation-query: SELECT 1 FROM DUAL
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      filters: stat,wall
+  cloud:
+    nacos:
+      discovery:
+        # 指定nacos server的地址
+        server-addr: @nacos.url@
+        namespace: @nacos.namespace@
+        group: DEFAULT_GROUP
+    loadbalancer:
+      ribbon:
+        enabled: false
+  redis:
+    host: @redis.host@
+    port: @redis.port@
+    password: @redis.password@
+    username: @redis.username@
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 500MB
+
+# MyBatis
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  # 实体扫描，多个package用逗号或者分号分隔
+  type-aliases-package: com.example.springbootwebsocketdemo.mapper,com.example.springbootwebsocketdemo.entity
+  configuration:
+    # 开启驼峰命名法
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 日志配置
+logging:
+  level:
+    com.study.websocket: debug
+
+# 自定义的websocket配置
+websocket:
+  netty:
+    # netty服务器要使用的端口号
+    port: 19998
+    # WebSocket服务的接口地址
+    url: /websocket

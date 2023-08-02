@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        # 指定nacos server的地址
+        server-addr: @nacos.url@
+        namespace: @nacos.namespace@
+        group: DEFAULT_GROUP
+      config:
+        server-addr: @nacos.url@
+        namespace: @nacos.namespace@
+        timeout: 3000
+        group: DEFAULT_GROUP
+        prefix: common-data-source3
+        refesh-enabled: true
+        file-extension: yaml
+        # 用于共享的配置文件
+        #shared-configs[0]:
+          #data-id: common-data-source3.yaml
+          #refresh: true
